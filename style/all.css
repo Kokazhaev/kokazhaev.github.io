@@ -1,0 +1,23 @@
+@import url(vendor/reset.css);
+@import url(vendor/fonts.css);
+@import url(components/header.css);
+@import url(components/nav.css);
+@import url(components/main.css);
+@import url(components/btn.css);
+@import url(components/aboutUs.css);
+@import url(components/focus.css);
+@import url(components/video.css);
+@import url(components/portfolio.css);
+@import url(components/team.css);
+@import url(components/rate.css);
+@import url(components/price.css);
+@import url(components/test.css);
+@import url(components/why.css);
+@import url(components/subscribe.css);
+@import url(components/send.css);
+@import url(components/input.css);
+@import url(components/footer.css);
+@import url(components/aside.css);
+@import url(components/modal.css);
+@import url(components/vid.css);
+

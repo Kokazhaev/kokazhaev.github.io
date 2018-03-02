@@ -1,0 +1,10 @@
+.vid {
+	width: 100%;
+	margin: 0 auto;
+	height: 386px;
+	display: none;
+}
+	.vid video {
+		width: 50%;
+		height: 386px;
+	}

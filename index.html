@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Second project</title>
+	<meta charset="utf-8">
+	<link rel="icon" href="images/stop.png" type="image/x-icon" >
+	<link rel="stylesheet" href="style/all.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body onmouseout="showInfo('hide')">
+
+	<section class="aside" id="aside">
+		<div class="aside__backdrop"  onclick="toggleAside('hide')"></div>
+		<nav class="nav__aside" id="nav__aside">
+			<div class="nav__close">
+				<img src="images/close.svg" alt="close" onclick="toggleAside('hide')">
+			</div>
+			<div class="nav__link nav__link_asides" onclick="scrollWindow('main'), toggleAside('close')"" >About Us</div>
+			<div class="nav__link nav__link_aside" onclick="scrollWindow('focus'), toggleAside('close')">Our Focus</div>
+			<div class="nav__link nav__link_aside" onclick="scrollWindow('portfolio'), toggleAside('close')">Portfolio</div>
+			<div class="nav__link nav__link_aside" onclick="scrollWindow('team'), toggleAside('close')">Our Team</div>
+			<div class="nav__link nav__link_aside" onclick="scrollWindow('price'), toggleAside('close')">Pricing</div>
+			<div class="nav__link nav__link_aside" onclick="scrollWindow('test'), toggleAside('close')">Testimanials</div>
+			<div class="nav__link nav__link_aside" onclick="scrollWindow('contacts'), toggleAside('close')">Contact</div>
+		</nav>
+	</section>
+
+	<section class="modal" id="modal">
+		<div class="modal__backdrop" onclick="toggleModal('hide')"></div>
+		<div class="modal__inner">
+			<div class="modal__top">
+			<div class="modal__top_title">
+				Your Message
+			</div>
+			<div class="modal__top_close" onclick="toggleModal('hide')">
+				<img src="images/close.svg" alt="close">
+			</div>
+		</div>
+		<div class="modal__bottom">
+			<div class="modal__input">
+				<input type="text" placeholder="Your Name">
+			</div>
+			<div class="modal__input">
+				<input type="text" placeholder="Your Email">
+			</div>
+			<div class="modal__input">
+				<input type="text" placeholder="Subject">
+			</div>
+			<div class="modal__input">
+				<input type="text" placeholder="Project Budget">
+			</div>
+			<div class="modal__input">
+				<textarea cols="30" rows="10" placeholder="Your Message"></textarea>
+			</div>
+			<div class="modal__btn">
+				<button class="btn">
+					Send
+				</button>
+			</div>
+		</div>
+		</div>
+	</section>
+
+	<section class="modal__buyg" id="modal__buyg">
+		<div class="modal__backdrop" onclick="toggleBuyModal('hide')"></div>
+		<div class="modal__inner">
+			<div class="modal__top">
+			<div class="modal__top_titlegreen">
+				Buy traffic <br><br>
+				$125 Per Month
+			</div>
+			<div class="modal__top_close" onclick="toggleBuyModal('hide')">
+				<img src="images/close.svg" alt="close">
+			</div>
+		</div>
+		<div class="modal__bottom">
+			<div class="modal__input modal__input_green">
+				<input type="text" placeholder="Your Name">
+			</div>
+			<div class="modal__input modal__input_green">
+				<input type="text" placeholder="Your Email">
+			</div>
+			<div class="modal__btn_green">
+				<button class="btn">
+					Send
+				</button>
+			</div>
+		</div>
+		</div>
+	</section>
+
+	<section class="modal__buyr" id="modal__buyr">
+		<div class="modal__backdrop" onclick="toggleBuyModal('hide')"></div>
+		<div class="modal__inner">
+			<div class="modal__top">
+			<div class="modal__top_title modal__top_red">
+				Buy traffic <br><br>
+				$195 Per Month
+			</div>
+			<div class="modal__top_close" onclick="toggleBuyModal('hide')">
+				<img src="images/close.svg" alt="close">
+			</div>
+		</div>
+		<div class="modal__bottom">
+			<div class="modal__input">
+				<input type="text" placeholder="Your Name">
+			</div>
+			<div class="modal__input">
+				<input type="text" placeholder="Your Email">
+			</div>
+			<div class="modal__btn">
+				<button class="btn">
+					Send
+				</button>
+			</div>
+		</div>
+		</div>
+	</section>
+
+	<section class="modal__buyp" id="modal__buyp">
+		<div class="modal__backdrop" onclick="toggleBuyModal('hide')"></div>
+		<div class="modal__inner">
+			<div class="modal__top">
+			<div class="modal__top_title modal__top_purple">
+				Buy traffic <br><br>
+				$145 Per Month
+			</div>
+			<div class="modal__top_close" onclick="toggleBuyModal('hide')">
+				<img src="images/close.svg" alt="close">
+			</div>
+		</div>
+		<div class="modal__bottom">
+			<div class="modal__input modal__input_purple">
+				<input type="text" placeholder="Your Name">
+			</div>
+			<div class="modal__input modal__input_purple">
+				<input type="text" placeholder="Your Email">
+			</div>
+			<div class="modal__btn modal__btn_purple">
+				<button class="btn">
+					Send
+				</button>
+			</div>
+		</div>
+		</div>
+	</section>
+
+	<header class="header" id="header">
+		<div class="header__menu">
+			<img src="images/menu.svg" alt="menu" onclick="toggleAside('show')">
+		</div>
+		<div class="header__logo">
+			<img src="images/Alexis.png" alt="logo">
+		</div>
+		<nav class="nav">
+			<div class="nav__link" onclick="scrollWindow('main')">About Us</div>
+			<div class="nav__link" onclick="scrollWindow('focus')">Our Focus</div>
+			<div class="nav__link" onclick="scrollWindow('portfolio')">Portfolio</div>
+			<div class="nav__link" onclick="scrollWindow('team')">Our Team</div>
+			<div class="nav__link" onclick="scrollWindow('price')">Pricing</div>
+			<div class="nav__link" onclick="scrollWindow('test')">Testimanials</div>
+			<div class="nav__link" onclick="scrollWindow('contacts')">Contact</div>
+		</nav>
+	</header>
+
+	<main class="main" id="main">
+		<div class="main__title" id="main__title">
+
+		</div>
+		<div class="main__btn">
+			<button class="btn" onclick="toggleModal('show')">
+				Send Message
+			</button>
+		</div>
+		<div class="main__section">
+			<div class="main__link">
+				<div class="main__link_img">
+					<img src="images/price.png" alt="img">
+				</div>
+				<div class="main__link_green">
+					FIXED PRICE PROJECT
+				</div>
+			</div>
+			<div class="main__link">
+				<div class="main__link_img">
+					<img src="images/time.png" alt="img">
+				</div>
+				<div class="main__link_purple">
+					RECEIVE ON TIME
+				</div>
+			</div>
+			<div class="main__link">
+				<div class="main__link_img">
+					<img src="images/ok.png" alt="img">
+				</div>
+				<div class="main__link_orange">
+					SATISFACTION GURANTEED
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<section class="aboutUs" id="aboutUs">
+		<div class="aboutUs__port">
+			555x700
+		</div>
+		<div class="aboutUs__info">
+			<div class="aboutUs__title">
+				About Us
+			</div>
+			<div class="aboutUs__description">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem ab eaque temporibus, consequuntur nam esse recusandae facere doloribus, vitae deserunt delectus dolore! Veniam quae alias saepe ipsum neque iure tempora iusto reiciendis perspiciatis illo, laboriosam dolorum veritatis! Ratione molestias, adipisci ea doloribus aut inventore vero, voluptatem fugiat nihil soluta veritatis!
+			</div>
+			<div class="aboutUs__end">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed natus illo libero similique debitis accusamus vero, quis, repudiandae magnam vel.
+			</div>
+		</div>
+	</section>
+
+	<section class="focus" id="focus">
+		<div class="focus__title">
+			Our Focus
+		</div>
+		<div class="focus__description">
+			We understandyour requirement and provide quality works
+		</div>
+		<div class="focus__grid">
+			<div class="focus__wrapper">
+				<div class="focus__link focus__link_red">
+				<div class="focus__link_img">
+					<img src="images/icon.png" alt="icon">
+				</div>
+				<div class="focus__link_title">
+					Web Design
+				</div>
+				<div class="focus__link_info">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda minima, dolores beatae.
+				</div>
+			</div>
+			</div>
+			<div class="focus__wrapper">
+				<div class="focus__link focus__link_green">
+				<div class="focus__link_img">
+					<img src="images/icon2.png" alt="icon">
+				</div>
+				<div class="focus__link_title">
+					UX Design
+				</div>
+				<div class="focus__link_info">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda minima, dolores beatae.
+				</div>
+			</div>
+			</div>
+			<div class="focus__wrapper">
+				<div class="focus__link focus__link_purple">
+				<div class="focus__link_img">
+					<img src="images/icon3.png" alt="icon">
+				</div>
+				<div class="focus__link_title">
+					Photography
+				</div>
+				<div class="focus__link_info">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda minima, dolores beatae.
+				</div>
+			</div>
+			</div>
+			<div class="focus__wrapper">
+				<div class="focus__link focus__link_orange">
+				<div class="focus__link_img">
+					<img src="images/icon1.png" alt="icon">
+				</div>
+				<div class="focus__link_title">
+					App Development
+				</div>
+				<div class="focus__link_info">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda minima, dolores beatae.
+				</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="video">
+		<div class="video__title" id="video__title">
+			Explore Our Awesomeness
+		</div>
+		<div class="video__img" id="video__img">
+			<img src="images/play.png" alt="play">
+		</div>
+		<div class="video__info" id="video__info">
+			Click to play the video
+		</div>
+
+	</section>
+
+	<section class="portfolio" id="portfolio">
+		<div class="portfolio__title">
+			Portfolio
+		</div>
+		<div class="portfolio__description">
+			We understand your requirement and provide quality works
+		</div>
+		<div class="portfolio__grid">
+			<div class="portfolio__wrapper" onmouseover="showInfo('show')">
+				<div class="portfolio__img">
+					<img src="images/project1.jpg" alt="item">
+				</div>
+				<div class="portfolio__bottom" id="portfolio__bottom">
+					<div class="portfolio__info">
+							Project 1
+					</div>
+				</div>
+				<div class="portfolio__plus" id="portfolio__plus">
+					<img src="images/plus.svg" alt="plus">
+				</div>
+				<div class="portfolio__backdrop"></div>
+			</div>
+			<div class="portfolio__wrapper" >
+				<div class="portfolio__img">
+					<img src="images/project2.jpg" alt="item">
+				</div>
+			</div>
+			<div class="portfolio__wrapper">
+				<div class="portfolio__img">
+					<img src="images/project3.jpg" alt="item">
+				</div>
+			</div>
+			<div class="portfolio__wrapper">
+				<div class="portfolio__img">
+					<img src="images/project4.jpg" alt="item">
+				</div>
+			</div>
+			<div class="portfolio__wrapper">
+				<div class="portfolio__img">
+					<img src="images/project9.jpg" alt="item">
+				</div>
+			</div>
+			<div class="portfolio__wrapper">
+				<div class="portfolio__img">
+					<img src="images/project6.jpg" alt="item">
+				</div>
+			</div>
+			<div class="portfolio__wrapper">
+				<div class="portfolio__img">
+					<img src="images/project7.jpg" alt="item">
+				</div>
+			</div>
+			<div class="portfolio__wrapper">
+				<div class="portfolio__img">
+					<img src="images/project8.jpg" alt="item">
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="team" id="team">
+		<div class="slider__img" onclick="slideBack()">
+			<img src="images/arrow.svg" alt="left">
+		</div>
+		<div class="slider__img_r" onclick="slideForward()">
+			<img src="images/arrow.svg" alt="right">
+		</div>
+		<div class="team__title">
+					Our Team
+				</div>
+				<div class="team__description">
+					We understand your reqirement and provide quality works
+				</div>
+		<div class="team__slider" id="slider">
+			<div class="team__slide team__slide1">
+
+				<div class="team__grid">
+					<div class="team__wrapper">
+						<div class="team__link">
+							<div class="team__link_img">
+								263x270
+							</div>
+							<div class="team__link_name">
+								Michael Schmit
+							</div>
+							<div class="team__link_info">
+								Founder & CEO
+							</div>
+						</div>
+					</div>
+					<div class="team__wrapper">
+						<div class="team__link_green">
+							<div class="team__img_green">
+								263x270
+							</div>
+							<div class="team__link_name green">
+								David Kramer
+							</div>
+							<div class="team__link_info">
+								Load Develor
+							</div>
+						</div>
+					</div>
+					<div class="team__wrapper">
+						<div class="team__link_purple">
+							<div class="team__img_purple">
+								263x270
+							</div>
+							<div class="team__link_name purple">
+								Anna Schroder
+							</div>
+							<div class="team__link_info">
+								Designer
+							</div>
+						</div>
+					</div>
+					<div class="team__wrapper">
+						<div class="team__link_orange">
+							<div class="team__img_orange">
+								263x270
+							</div>
+							<div class="team__link_name orange">
+								Jason Teichmann
+							</div>
+							<div class="team__link_info">
+								Consultant
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="team__slide team__slide2">
+
+				<div class="team__grid">
+					<div class="team__wrapper">
+						<div class="team__link_green">
+							<div class="team__img_green">
+								263x270
+							</div>
+							<div class="team__link_name green">
+								David Kramer
+							</div>
+							<div class="team__link_info">
+								Load Develor
+							</div>
+						</div>
+					</div>
+					<div class="team__wrapper">
+						<div class="team__link">
+							<div class="team__link_img">
+								263x270
+							</div>
+							<div class="team__link_name">
+								Michael Schmit
+							</div>
+							<div class="team__link_info">
+								Founder & CEO
+							</div>
+						</div>
+					</div>
+					<div class="team__wrapper">
+						<div class="team__link_orange">
+							<div class="team__img_orange">
+								263x270
+							</div>
+							<div class="team__link_name orange">
+								Jason Teichmann
+							</div>
+							<div class="team__link_info">
+								Consultant
+							</div>
+						</div>
+					</div>
+					<div class="team__wrapper">
+						<div class="team__link_purple">
+							<div class="team__img_purple">
+								263x270
+							</div>
+							<div class="team__link_name purple">
+								Anna Schroder
+							</div>
+							<div class="team__link_info">
+								Designer
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="team__slide team__slide3">
+				<div class="team__grid">
+				<div class="team__wrapper">
+						<div class="team__link_purple">
+							<div class="team__img_purple">
+								263x270
+							</div>
+							<div class="team__link_name purple">
+								Anna Schroder
+							</div>
+							<div class="team__link_info">
+								Designer
+							</div>
+						</div>
+					</div>
+					<div class="team__wrapper">
+						<div class="team__link_green">
+							<div class="team__img_green">
+								263x270
+							</div>
+							<div class="team__link_name green">
+								David Kramer
+							</div>
+							<div class="team__link_info">
+								Load Develor
+							</div>
+						</div>
+					</div>
+
+					<div class="team__wrapper">
+						<div class="team__link_orange">
+							<div class="team__img_orange">
+								263x270
+							</div>
+							<div class="team__link_name orange">
+								Jason Teichmann
+							</div>
+							<div class="team__link_info">
+								Consultant
+							</div>
+						</div>
+					</div>
+					<div class="team__wrapper">
+						<div class="team__link">
+							<div class="team__link_img">
+								263x270
+							</div>
+							<div class="team__link_name">
+								Michael Schmit
+							</div>
+							<div class="team__link_info">
+								Founder & CEO
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="rate">
+		<div class="rate__grid">
+			<div class="rate__img">
+				<img src="images/rate.png" alt="icon">
+			</div>
+			<div class="rate__numb">
+				12,458+
+			</div>
+			<div class="rate__info">
+				Project Completed
+			</div>
+			<div class="rate__img">
+				<img src="images/red.png" alt="dot">
+			</div>
+		</div>
+		<div class="rate__grid">
+			<div class="rate__img">
+				<img src="images/man.png" alt="icon">
+			</div>
+			<div class="rate__numb">
+				1,796+
+			</div>
+			<div class="rate__info">
+				Satisfied clients
+			</div>
+			<div class="rate__img">
+				<img src="images/green.png" alt="dot">
+			</div>
+		</div>
+		<div class="rate__grid">
+			<div class="rate__img">
+				<img src="images/heart.png" alt="icon">
+			</div>
+			<div class="rate__numb">
+				1,000+
+			</div>
+			<div class="rate__info">
+				Positive Feedbacks
+			</div>
+			<div class="rate__img">
+				<img src="images/purple.png" alt="dot">
+			</div>
+		</div>
+		<div class="rate__grid">
+			<div class="rate__img">
+				<img src="images/gift.png" alt="icon">
+			</div>
+			<div class="rate__numb">
+				1,500+
+			</div>
+			<div class="rate__info">
+				Freebles Released
+			</div>
+			<div class="rate__img">
+				<img src="images/orange.png" alt="dot">
+			</div>
+		</div>
+	</section>
+
+	<section class="price" id="price">
+		<div class="price__title">
+			Pricicng Table
+		</div>
+		<div class="price__description">
+			We understand your reqierement and provide quality works
+		</div>
+		<div class="price__grid">
+			<div class="price__wrapper">
+				<div class="price__link">
+					<div class="price__link_title">
+						Starter
+					</div>
+					<div class="price__link_box">
+						<img src="images/priceg.png" alt="circle">
+						<div>$125</div>
+					</div>
+					<div>
+						200GB Online Storage
+					</div>
+					<div>
+						20 Files For Day
+					</div>
+					<div>
+						2TB Monthly Bandwidth
+					</div>
+					<div>
+						✔ Secure Platform
+					</div>
+					<div>
+						✔ 24/7 Customer Support
+					</div>
+					<div>
+						✔ Fast & Reliable
+					</div>
+					<div class="price__link_btn">
+						<button class="btn" onclick="toggleBuyModal('125')">
+							Get Started
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="price__wrapper">
+				<div class="price__link price__link_1">
+					<div class="price__link_title">
+						Ultimate
+					</div>
+					<div class="price__link_box">
+						<img src="images/pricer.png" alt="circle">
+						<div>$195</div>
+					</div>
+					<div>
+						800GB Online Storage
+					</div>
+					<div>
+						Unlimited Files For Day
+					</div>
+					<div>
+						10TB Monthly Bandwidth
+					</div>
+					<div>
+						✔ Secure Platform
+					</div>
+					<div>
+						✔ 24/7 Customer Support
+					</div>
+					<div>
+						✔ Fast & Reliable
+					</div>
+					<div class=" price__link_btn_1">
+						<button class="btn" onclick="toggleBuyModal('195')">
+							Get Started
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="price__wrapper">
+				<div class="price__link price__link_2">
+					<div class="price__link_title">
+						Professional
+					</div>
+					<div class="price__link_box">
+						<img src="images/pricep.png" alt="circle">
+						<div>$145</div>
+					</div>
+					<div>
+						400GB Online Storage
+					</div>
+					<div>
+						40 Files For Day
+					</div>
+					<div>
+						5TB Monthly Bandwidth
+					</div>
+					<div>
+						✔ Secure Platform
+					</div>
+					<div>
+						✔ 24/7 Customer Support
+					</div>
+					<div>
+						✔ Fast & Reliable
+					</div>
+					<div class="price__link_btn_2">
+						<button class="btn" onclick="toggleBuyModal('145')">
+							Get Started
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="test" id="test">
+		<div class="test__title">
+			Testimanials
+		</div>
+		<div class="test__description">
+			We understand your requirement and provide quality works
+		</div>
+		<div class="test__bottom">
+			<div class="test__box">
+				310x310
+			</div>
+			<div class="test__comment">
+				<div class="test__com">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, in quisquam impedit voluptatem molestiae quibusdam totam reiciendis cupiditate dignissimos repellat excepturi placeat quae sed quos nobis eligendi soluta, autem maiores delectus, atque. Recusandae dignissimos id facilis esse unde iusto impedit consectetur, consequuntur labore. Nulla dolores qui, deleniti maiores nostrum odio!
+				</div>
+				<div class="test__melina">
+					<img src="images/melina.png" alt="melina">
+				</div>
+				<div class="test__name">
+					Melina Albrecht
+				</div>
+				<div class="test__info">
+					Founder, TingTong
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="why">
+		<div class="why__title">
+			Why Select Us
+		</div>
+		<div class="why__description">
+			We understand your requirement and provide quality works
+		</div>
+		<div class="why__grid">
+			<div class="why__wrapper">
+				<div class="why__link">
+					<div class="why__link_top">
+						<div class="why__link_img">
+							<img src="images/business.png" alt="business">
+						</div>
+						<div class="why__link_title">
+							Business <br>Growth
+						</div>
+					</div>
+					<div class="why__link_bottom">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt officiis ipsum aliquid mollitia nesciunt! Dolore.
+					</div>
+				</div>
+			</div>
+			<div class="why__wrapper">
+				<div class="why__link">
+					<div class="why__link_top">
+						<div class="why__link_img">
+							<img src="images/revisions.png" alt="business">
+						</div>
+						<div class="why__link_title">
+							Unlimited <br>Revisions
+						</div>
+					</div>
+					<div class="why__link_bottom">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt officiis ipsum aliquid mollitia nesciunt! Dolore.
+					</div>
+				</div>
+			</div>
+			<div class="why__wrapper">
+				<div class="why__link">
+					<div class="why__link_top">
+						<div class="why__link_img">
+							<img src="images/perfection.png" alt="business">
+						</div>
+						<div class="why__link_title">
+							Ultimate<br> Perfection
+						</div>
+					</div>
+					<div class="why__link_bottom">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt officiis ipsum aliquid mollitia nesciunt! Dolore.
+					</div>
+				</div>
+			</div>
+			<div class="why__wrapper">
+				<div class="why__link">
+					<div class="why__link_top">
+						<div class="why__link_img">
+							<img src="images/experiense.png" alt="business">
+						</div>
+						<div class="why__link_title">
+							Smart <br>Experience
+						</div>
+					</div>
+					<div class="why__link_bottom">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt officiis ipsum aliquid mollitia nesciunt! Dolore.
+					</div>
+				</div>
+			</div>
+			<div class="why__wrapper">
+				<div class="why__link">
+					<div class="why__link_top">
+						<div class="why__link_img">
+							<img src="images/deadline.png" alt="business">
+						</div>
+						<div class="why__link_title">
+							Strict<br> Deadline
+						</div>
+					</div>
+					<div class="why__link_bottom">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt officiis ipsum aliquid mollitia nesciunt! Dolore.
+					</div>
+				</div>
+			</div>
+			<div class="why__wrapper">
+				<div class="why__link">
+					<div class="why__link_top">
+						<div class="why__link_img">
+							<img src="images/award.png" alt="business">
+						</div>
+						<div class="why__link_title">
+							Award-Winning <br>Company
+						</div>
+					</div>
+					<div class="why__link_bottom">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt officiis ipsum aliquid mollitia nesciunt! Dolore.
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="why__end">
+			<div class="why__end_intro">
+				Start your journey with us now
+			</div>
+			<div class="why__btn">
+				<button class="btn">
+					GET STARTED
+				</button>
+			</div>
+		</div>
+	</section>
+
+	<section class="subscribe">
+		<div class="subscribe__title">
+			Subscribe To Newsteller
+		</div>
+		<div class="subscribe__input">
+			<div class="subscribe__input_mail">
+				<input type="mail" placeholder="Enter your email">
+			</div>
+			<div class="subscribe__btn">
+				<button class="btn">
+					SUBSCRIBE NOW
+				</button>
+			</div>
+		</div>
+	</section>
+
+	<section class="send" id="contacts">
+		<div class="send__title">
+			Get in Touch
+		</div>
+		<div class="send__description">
+			We understand your requirement and provide quality works
+		</div>
+		<div class="send__input">
+			<div class="send__input_link">
+				<input type="text" placeholder="Your Name" class="input">
+			</div>
+			<div class="send__input_link">
+				<input type="mail" placeholder="Your Email" class="input">
+			</div>
+			<div class="send__input_link">
+				<input type="text" placeholder="Subject" class="input">
+			</div>
+			<div class="send__input_link">
+				<input type="text" placeholder="Project Budget" class="input">
+			</div>
+			<div class="send__input_links">
+				<textarea cols="50" rows="10" class="input" placeholder="Your Message"></textarea>
+			</div>
+			<div class="send__btn">
+				<button class="btn">
+					SEND MESSAGE
+				</button>
+			</div>
+		</div>
+		<footer class="footer">
+			<div class="footer__logo">
+				<img src="images/Alexis.png" alt="logo">
+			</div>
+			<div class="footer__adress">
+				<div class="footer__name">
+					Alexis LLC.
+				</div>
+				<div class="footer__info">
+					4125 Brighton Circle Road
+				</div>
+				<div class="footer__add">
+					Little Falls, MN 56345
+				</div>
+			</div>
+			<div class="footer__adress address">
+				<div class="footer__names">
+					Alexis LLC UK.
+				</div>
+				<div class="footer__info">
+					81 Golden Knowes Road
+				</div>
+				<div class="footer__add">
+					Freshfield L37 6TP
+				</div>
+			</div>
+			<div class="footer__social">
+				<div class="footer__follow">
+					Follow Us.
+				</div>
+				<div class="footer__soc">
+					<div class="footer__link">
+						<img src="images/facebook.png" alt="face">
+					</div>
+					<div class="footer__link">
+						<img src="images/twitter.png" alt="twit">
+					</div>
+					<div class="footer__link">
+						<a href="https://www.instagram.com/irinakairatovna/?hl=ru" target="_blank"><img src="images/ball.png" alt="insta"></a>
+					</div>
+					<div class="footer__link">
+						<img src="images/google.png" alt="google">
+					</div>
+				</div>
+			</div>
+		</footer>
+	</section>
+
+	<script src="js/aside.js"></script>
+	<script src="js/showinfo.js"></script>
+	<script src="js/modal.js"></script>
+	<script src="js/typing.js"></script>
+	<script src="js/scroll.js"></script>
+	<script src="js/slider.js"></script>
+</body>
+</html>

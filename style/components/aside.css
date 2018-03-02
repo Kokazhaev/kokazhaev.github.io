@@ -1,0 +1,43 @@
+.aside{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	background-color: rgba(0, 0, 0, 0.2);
+	display: none;
+	z-index: 250;
+}
+.aside__backdrop {
+	width: 100%;
+	height: 100%;
+}
+.nav__aside {
+	width: 300px;
+	bottom: 0;
+	top: 0;
+	position: fixed;
+	background-color: #fff;
+	z-index: 1;
+	left: -300px;
+	transition: 0.1s
+}
+	.nav__close {
+		width: 30px;
+		position: absolute;
+		right: 20px;
+		top: 20px;
+	}
+		.nav__close img {
+			width: 100%;
+		}
+	.nav__link_asides {
+		text-align: center;
+		margin-top: 60px;
+		font-size: 19px;
+		color: #313131;
+	}	
+	.nav__link_aside {
+		margin-top: 15px;
+		text-align: center;
+		color: #313131;
+		font-size: 19px;
+	}	

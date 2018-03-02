@@ -1,0 +1,23 @@
+.nav {
+	width: calc(100% - 150px);
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-end;
+	margin-right: 20px;
+}
+	.nav__link {
+		padding: 10px 10px;
+		font-size: 15px;
+		align-items: center;
+		cursor: pointer;
+		color: #313131;
+	}
+	.nav__link:hover {
+		color: #fc5f45;
+		transition: 0.3s;
+	}
+@media screen and (max-width: 1023px) {
+	.nav {
+		display: none;
+	}
+}	

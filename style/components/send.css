@@ -1,0 +1,32 @@
+.send {
+	width: 100%;
+	text-align: center;
+	background-color: #bcbcbc;
+	padding: 80px 0 80px;
+	color: #313131;
+}
+	.send__title {
+		font-size: 35px
+	}
+	.send__description {
+		font-size: 15px;
+		margin: 30px 0 30px;
+	}
+	.send__input {
+		width: 700px;
+		display: flex;
+		flex-flow: row wrap;
+		margin: 0 auto;
+	}
+@media screen and (max-width: 1023px) {
+	.send {
+		padding: 80px 0 0;
+	}
+}	
+@media screen and (max-width: 767px) {
+	.send__input {
+		width: 100%;
+	}
+	
+}	
+	
